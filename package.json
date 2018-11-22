@@ -1,20 +1,53 @@
 {
-  "name": "elasticsearch-utils",
+  "name": "@please.com/elasticsearch-utils",
   "description": "Pieces of common ES code that's used across multiple repos/services",
   "version": "0.0.1",
   "author": "Jaydeep Solanki <jaydeep.solanki@please.com> (https://jaydp.com)",
   "bugs": {
     "url": "https://github.com/PleaseDotCom/elasticsearch-utils/issues"
   },
+  "devDependencies": {
+    "@please.com/eslint-config": "1.0.0",
+    "eslint": "^5.9.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "1.15.2",
+    "release-it": "^8.0.1",
+    "typescript": "3.1.6"
+  },
+  "engines": {
+    "node": ">= 8",
+    "npm": ">= 6"
+  },
   "homepage": "https://github.com/PleaseDotCom/elasticsearch-utils#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run type-check && lint-staged"
+    }
+  },
   "keywords": [],
   "license": "MIT",
-  "main": "index.js",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PleaseDotCom/elasticsearch-utils.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write '**/*.{js,json,yaml,yml,md}'",
+    "lint": "eslint .",
+    "npm:release": "git fetch --tags && release-it -n",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc"
   }
 }
