@@ -52,3 +52,51 @@
  * @prop {string} items.index.error.shard
  * @prop {string} items.index.error.type exception type "version_conflict_engine_exception"
  */
+
+/**
+ * @typedef {object} PartialServiceGroup
+ * @prop {ObjectId | string} _id
+ * @prop {string} privacy
+ * @prop {string} status
+ * @prop {number} basePrice
+ * @prop {object} title
+ * @prop {object} subtitle
+ * @prop {object} description
+ * @prop {object} ratings
+ * @prop {number} ratings.average
+ * @prop {number} ratings.count
+ * @prop {(string|ObjectId)[]} tags
+ * @prop {object} location
+ * @prop {object} location.geo
+ * @prop {string} location.geo.type
+ * @prop {number[]} location.geo.coordinates
+ * @prop {string} location.formattedAddress
+ * @prop {string} location.countryCode
+ * @prop {Date} createdAt
+ * @prop {Date} updatedAt
+ * @prop {number} __v
+ */
+
+/**
+ * @typedef {object} IndexableServiceGroup
+ * @prop {string} _id
+ * @prop {string} privacy
+ * @prop {string} status
+ * @prop {number} basePrice
+ * @prop {object} title
+ * @prop {object} subtitle
+ * @prop {object} description
+ * @prop {object} ratings
+ * @prop {number} ratings.average
+ * @prop {number} ratings.count
+ * @prop {(string|ObjectId)[]} tags
+ * @prop {object} location
+ * @prop {object} location.geo
+ * @prop {string} location.geo.type
+ * @prop {number[]} location.geo.coordinates
+ * @prop {string} location.formattedAddress
+ * @prop {string} location.countryCode
+ * @prop {number} createdAt
+ * @prop {number} updatedAt
+ * @prop {number} __v
+ */
