@@ -39,7 +39,6 @@
       "git add"
     ]
   },
-  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PleaseDotCom/elasticsearch-utils.git"
