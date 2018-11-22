@@ -9,10 +9,16 @@ function keepOnlyRequiredFields(service) {
   // because the original Service type has a lot more fields
   return {
     _id: service._id.toString(),
+    status: service.status,
+    basePrice: service.basePrice,
+    categories: service.categories,
     title: service.title,
     description: service.description,
     subtitle: service.subtitle,
+    ratings: service.ratings,
+    tags: service.tags,
     location: service.location,
+    isMostlyAvailable: service.isMostlyAvailable,
     createdAt: service.createdAt.getTime(),
     updatedAt: service.updatedAt.getTime(),
     __v: service.__v,
