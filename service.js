@@ -42,7 +42,7 @@ function generateEsBody(indexableServices, { _index, _type = '_doc' }) {
           _index,
           _type,
           _id,
-          _version: service.updatedAt,
+          version: service.updatedAt,
           version_type: 'external',
         },
       },
