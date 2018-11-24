@@ -72,11 +72,11 @@
 /**
  * @typedef {object} PartialServiceGroup
  * @prop {ObjectId | string} _id
+ * @prop {string} status
  * @prop {string} privacy
  * @prop {object[]} parents
  * @prop {ObjectId | string} parents.serviceGroup
- * @prop {Date | string} parents.cloneDate
- * @prop {string} status
+ * @prop {Date} parents.cloneDate
  * @prop {number} basePrice
  * @prop {object} title
  * @prop {object} subtitle
@@ -100,11 +100,11 @@
 /**
  * @typedef {object} IndexableServiceGroup
  * @prop {string} _id
+ * @prop {string} status
  * @prop {string} privacy
  * @prop {object[]} parents
  * @prop {ObjectId | string} parents.serviceGroup
- * @prop {Date | string} parents.cloneDate
- * @prop {string} status
+ * @prop {number} parents.cloneDate
  * @prop {number} basePrice
  * @prop {object} title
  * @prop {object} subtitle
