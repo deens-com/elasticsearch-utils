@@ -73,6 +73,9 @@
  * @typedef {object} PartialServiceGroup
  * @prop {ObjectId | string} _id
  * @prop {string} privacy
+ * @prop {object[]} parents
+ * @prop {ObjectId | string} parents.serviceGroup
+ * @prop {Date | string} parents.cloneDate
  * @prop {string} status
  * @prop {number} basePrice
  * @prop {object} title
@@ -88,6 +91,7 @@
  * @prop {number[]} location.geo.coordinates
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
+ * @prop {number} forkedBookingsCount
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
@@ -97,6 +101,9 @@
  * @typedef {object} IndexableServiceGroup
  * @prop {string} _id
  * @prop {string} privacy
+ * @prop {object[]} parents
+ * @prop {ObjectId | string} parents.serviceGroup
+ * @prop {Date | string} parents.cloneDate
  * @prop {string} status
  * @prop {number} basePrice
  * @prop {object} title
@@ -112,6 +119,7 @@
  * @prop {number[]} location.geo.coordinates
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
+ * @prop {number} forkedBookingsCount
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
