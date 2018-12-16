@@ -19,6 +19,12 @@ function keepOnlyRequiredFields(service) {
     tags: service.tags,
     location: service.location,
     isMostlyAvailable: service.isMostlyAvailable,
+    heroImageUrl:
+      service.media &&
+      service.media[0] &&
+      service.media[0].files &&
+      service.media[0].files.hero &&
+      service.media[0].files.hero.url,
     createdAt: service.createdAt.getTime(),
     updatedAt: service.updatedAt.getTime(),
     __v: service.__v,

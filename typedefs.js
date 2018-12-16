@@ -22,6 +22,7 @@
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
  * @prop {boolean} isMostlyAvailable
+ * @prop {MediaObject[]} media
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
@@ -47,6 +48,7 @@
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
  * @prop {boolean} isMostlyAvailable
+ * @prop {string} heroImageUrl
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
@@ -92,6 +94,7 @@
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
  * @prop {number} forkedBookingsCount
+ * @prop {MediaObject[]} media
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
@@ -120,7 +123,28 @@
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
  * @prop {number} forkedBookingsCount
+ * @prop {string} heroImageUrl
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
+ */
+
+/**
+ * @typedef {object} MediaObject
+ * @prop {MediaFiles} files
+ */
+
+/**
+ * @typedef {object} MediaImage
+ * @prop {string} url
+ * @prop {number} height
+ * @prop {number} width
+ */
+
+/**
+ * @typedef {object} MediaFiles
+ * @prop {MediaImage} hero
+ * @prop {MediaImage} large
+ * @prop {MediaImage} small
+ * @prop {MediaImage} thumbnail
  */
