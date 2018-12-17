@@ -132,6 +132,7 @@
 /**
  * @typedef {object} MediaObject
  * @prop {MediaFiles} files
+ * @prop {boolean} hero
  */
 
 /**
