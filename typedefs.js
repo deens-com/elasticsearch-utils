@@ -23,6 +23,7 @@
  * @prop {string} location.countryCode
  * @prop {boolean} isMostlyAvailable
  * @prop {MediaObject[]} media
+ * @prop {{payAt: string} | undefined} checkoutOptions
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
@@ -49,6 +50,7 @@
  * @prop {string} location.countryCode
  * @prop {boolean} isMostlyAvailable
  * @prop {string} heroImageUrl
+ * @prop {string | undefined} payAt
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
@@ -94,6 +96,7 @@
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
  * @prop {number} forkedBookingsCount
+ * @prop {boolean} fastBookable
  * @prop {MediaObject[]} media
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
@@ -123,6 +126,7 @@
  * @prop {string} location.formattedAddress
  * @prop {string} location.countryCode
  * @prop {number} forkedBookingsCount
+ * @prop {boolean} fastBookable
  * @prop {string} heroImageUrl
  * @prop {number} createdAt
  * @prop {number} updatedAt

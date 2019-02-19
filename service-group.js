@@ -24,6 +24,7 @@ function keepOnlyRequiredFields(service) {
     tags: service.tags,
     location: service.location,
     forkedBookingsCount: service.forkedBookingsCount,
+    fastBookable: service.fastBookable,
     heroImageUrl:
       service.media &&
       service.media[0] &&
