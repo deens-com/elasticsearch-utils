@@ -6,6 +6,7 @@
  * @typedef {object} PartialService
  * @prop {ObjectId | string} _id
  * @prop {string} status
+ * @prop {string} privacy
  * @prop {number} basePrice
  * @prop {string[]} categories
  * @prop {object} title
@@ -33,6 +34,7 @@
  * @typedef {object} IndexableService
  * @prop {string} _id
  * @prop {string} status
+ * @prop {string} privacy
  * @prop {number} basePrice
  * @prop {string[]} categories
  * @prop {object} title

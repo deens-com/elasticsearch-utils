@@ -10,6 +10,7 @@ function keepOnlyRequiredFields(service) {
   return {
     _id: service._id.toString(),
     status: service.status,
+    privacy: service.privacy,
     basePrice: service.basePrice,
     categories: service.categories,
     title: service.title,
