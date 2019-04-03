@@ -1,7 +1,7 @@
 {
   "name": "@please.com/elasticsearch-utils",
   "description": "Pieces of common ES code that's used across multiple repos/services",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Jaydeep Solanki <jaydeep.solanki@please.com> (https://jaydp.com)",
   "bugs": {
     "url": "https://github.com/PleaseDotCom/elasticsearch-utils/issues"
