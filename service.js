@@ -13,6 +13,7 @@ function keepOnlyRequiredFields(service) {
     privacy: service.privacy,
     basePrice: service.basePrice,
     categories: service.categories,
+    externalId: service.externalId,
     title: service.title,
     description: service.description,
     subtitle: service.subtitle,

@@ -9,6 +9,7 @@
  * @prop {string} privacy
  * @prop {number} basePrice
  * @prop {string[]} categories
+ * @prop {string} externalId
  * @prop {object} title
  * @prop {object} subtitle
  * @prop {object} description
@@ -37,6 +38,7 @@
  * @prop {string} privacy
  * @prop {number} basePrice
  * @prop {string[]} categories
+ * @prop {string} externalId
  * @prop {object} title
  * @prop {object} subtitle
  * @prop {object} description
