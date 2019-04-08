@@ -5,6 +5,16 @@
 const flatten = array => array.reduce((a, b) => a.concat(b), []);
 
 /**
+ * Returns the max value out of an array
+ * @param {Array} array
+ * @param {(value: any) => any} getValue
+ */
+function getMaxValue(array, getValue) {
+  const values = array.map(getValue);
+  return Math.max(...values, 1);
+}
+
+/**
  * Extracts a hero URL from media objects
  * @param {MediaObject[]} media
  */
@@ -16,4 +26,4 @@ const getHeroUrl = media => {
   return media[0] && media[0].files && media[0].files.hero && media[0].files.hero.url;
 };
 
-module.exports = { flatten, getHeroUrl };
+module.exports = { flatten, getMaxValue, getHeroUrl };

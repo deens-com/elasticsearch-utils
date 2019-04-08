@@ -85,7 +85,8 @@
  * @prop {object[]} parents
  * @prop {ObjectId | string} parents.serviceGroup
  * @prop {Date} parents.cloneDate
- * @prop {number} basePrice
+ * @prop {number} totalPrice
+ * @prop {number} bookablePrice
  * @prop {object} title
  * @prop {object} subtitle
  * @prop {object} description
@@ -93,6 +94,9 @@
  * @prop {number} ratings.average
  * @prop {number} ratings.count
  * @prop {(string|ObjectId)[]} tags
+ * @prop {object[]} services
+ * @prop {ObjectId | string} services.service
+ * @prop {number} services.day
  * @prop {object} location
  * @prop {object} location.geo
  * @prop {string} location.geo.type
@@ -115,7 +119,9 @@
  * @prop {object[]} parents
  * @prop {ObjectId | string} parents.serviceGroup
  * @prop {number} parents.cloneDate
- * @prop {number} basePrice
+ * @prop {number} totalPrice
+ * @prop {number} totalPricePerDay
+ * @prop {number} bookablePrice
  * @prop {object} title
  * @prop {object} subtitle
  * @prop {object} description

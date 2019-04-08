@@ -1,39 +1,42 @@
-const { flatten } = require('./helpers');
+const { flatten, getMaxValue } = require('./helpers');
 
 /**
  * Removes all fields that are not supposed to be indexed
- * @param {PartialServiceGroup} service
+ * @param {PartialServiceGroup} trip
  * @return {IndexableServiceGroup}
  */
-function keepOnlyRequiredFields(service) {
-  // because the original Service type has a lot more fields
-  const parents = service.parents.map(parent => ({
+function keepOnlyRequiredFields(trip) {
+  // because the original Trip type has a lot more fields
+  const parents = trip.parents.map(parent => ({
     serviceGroup: parent.serviceGroup.toString(),
     cloneDate: parent.cloneDate.getTime(),
   }));
+  const totalDays = getMaxValue(trip.services, serviceOrg => serviceOrg.day);
   return {
-    _id: service._id.toString(),
-    status: service.status,
-    privacy: service.privacy,
+    _id: trip._id.toString(),
+    status: trip.status,
+    privacy: trip.privacy,
     parents,
-    basePrice: service.basePrice,
-    title: service.title,
-    subtitle: service.subtitle,
-    description: service.description,
-    ratings: service.ratings,
-    tags: service.tags,
-    location: service.location,
-    forkedBookingsCount: service.forkedBookingsCount,
-    fastBookable: service.fastBookable,
+    totalPrice: trip.totalPrice,
+    totalPricePerDay: +(trip.totalPrice / totalDays).toFixed(2),
+    bookablePrice: trip.bookablePrice,
+    title: trip.title,
+    subtitle: trip.subtitle,
+    description: trip.description,
+    ratings: trip.ratings,
+    tags: trip.tags,
+    location: trip.location,
+    forkedBookingsCount: trip.forkedBookingsCount,
+    fastBookable: trip.fastBookable,
     heroImageUrl:
-      service.media &&
-      service.media[0] &&
-      service.media[0].files &&
-      service.media[0].files.hero &&
-      service.media[0].files.hero.url,
-    createdAt: service.createdAt.getTime(),
-    updatedAt: service.updatedAt.getTime(),
-    __v: service.__v,
+      trip.media &&
+      trip.media[0] &&
+      trip.media[0].files &&
+      trip.media[0].files.hero &&
+      trip.media[0].files.hero.url,
+    createdAt: trip.createdAt.getTime(),
+    updatedAt: trip.updatedAt.getTime(),
+    __v: trip.__v,
   };
 }
 
