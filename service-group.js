@@ -28,6 +28,7 @@ function keepOnlyRequiredFields(trip) {
     location: trip.location,
     forkedBookingsCount: trip.forkedBookingsCount,
     fastBookable: trip.fastBookable,
+    hearts: trip.hearts,
     heroImageUrl:
       trip.media &&
       trip.media[0] &&

@@ -105,6 +105,7 @@
  * @prop {string} location.countryCode
  * @prop {number} forkedBookingsCount
  * @prop {boolean} fastBookable
+ * @prop {number} hearts
  * @prop {MediaObject[]} media
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
@@ -138,6 +139,7 @@
  * @prop {number} forkedBookingsCount
  * @prop {boolean} fastBookable
  * @prop {string} heroImageUrl
+ * @prop {number} hearts
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
