@@ -107,6 +107,7 @@
  * @prop {boolean} fastBookable
  * @prop {number} hearts
  * @prop {MediaObject[]} media
+ * @prop {TripPricingObject[]} pricing
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
@@ -140,6 +141,7 @@
  * @prop {boolean} fastBookable
  * @prop {string} heroImageUrl
  * @prop {number} hearts
+ * @prop {IndexableTripPricing} pricing
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
@@ -164,4 +166,29 @@
  * @prop {MediaImage} large
  * @prop {MediaImage} small
  * @prop {MediaImage} thumbnail
+ */
+
+/**
+ * @typedef {object} TripPricingObject
+ * @prop {number} adultCount
+ * @prop {number} childrenCount
+ * @prop {number} infantCount
+ * @prop {number} price
+ * @prop {number} pricePerDay
+ */
+
+/**
+ * @typedef {object} IndexableTripPricingElement
+ * @prop {number} price
+ * @prop {number} pricePerDay
+ */
+
+/**
+ * @typedef {object} IndexableTripPricing
+ * @prop {IndexableTripPricingElement} p1_0_0
+ * @prop {IndexableTripPricingElement} p1_1_0
+ * @prop {IndexableTripPricingElement} p1_2_0
+ * @prop {IndexableTripPricingElement} p2_0_0
+ * @prop {IndexableTripPricingElement} p2_1_0
+ * @prop {IndexableTripPricingElement} p2_2_0
  */
