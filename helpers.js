@@ -26,4 +26,6 @@ const getHeroUrl = media => {
   return media[0] && media[0].files && media[0].files.hero && media[0].files.hero.url;
 };
 
-module.exports = { flatten, getMaxValue, getHeroUrl };
+const MINUTES_IN_A_DAY = 1440;
+
+module.exports = { flatten, getMaxValue, getHeroUrl, MINUTES_IN_A_DAY };
