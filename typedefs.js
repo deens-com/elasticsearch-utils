@@ -87,6 +87,7 @@
  * @prop {Date} parents.cloneDate
  * @prop {number} totalPrice
  * @prop {number} bookablePrice
+ * @prop {number} duration
  * @prop {object} title
  * @prop {object} subtitle
  * @prop {object} description

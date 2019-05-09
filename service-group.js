@@ -1,4 +1,4 @@
-const { flatten, getMaxValue } = require('./helpers');
+const { flatten, getMaxValue, MINUTES_IN_A_DAY } = require('./helpers');
 
 /**
  * Removes all fields that are not supposed to be indexed
@@ -11,7 +11,9 @@ function keepOnlyRequiredFields(trip) {
     serviceGroup: parent.serviceGroup.toString(),
     cloneDate: parent.cloneDate.getTime(),
   }));
-  const totalDays = getMaxValue(trip.services, serviceOrg => serviceOrg.day);
+  const daysInServices = getMaxValue(trip.services, serviceOrg => serviceOrg.day);
+  const daysInDuration = Math.ceil(trip.duration / MINUTES_IN_A_DAY);
+  const totalDays = Math.max(daysInServices, daysInDuration);
   return {
     _id: trip._id.toString(),
     status: trip.status,
