@@ -1,4 +1,4 @@
-const { flatten, getMaxValue, MINUTES_IN_A_DAY } = require('./helpers');
+const { flatten, getMaxValue, getHeroUrl, MINUTES_IN_A_DAY } = require('./helpers');
 
 /**
  * Removes all fields that are not supposed to be indexed
@@ -31,12 +31,7 @@ function keepOnlyRequiredFields(trip) {
     forkedBookingsCount: trip.forkedBookingsCount,
     fastBookable: trip.fastBookable,
     hearts: trip.hearts,
-    heroImageUrl:
-      trip.media &&
-      trip.media[0] &&
-      trip.media[0].files &&
-      trip.media[0].files.hero &&
-      trip.media[0].files.hero.url,
+    heroImageUrl: getHeroUrl(trip.media),
     createdAt: trip.createdAt.getTime(),
     updatedAt: trip.updatedAt.getTime(),
     __v: trip.__v,
