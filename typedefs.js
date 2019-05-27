@@ -161,8 +161,9 @@
 
 /**
  * @typedef {object} MediaFiles
- * @prop {MediaImage} hero
- * @prop {MediaImage} large
- * @prop {MediaImage} small
- * @prop {MediaImage} thumbnail
+ * @prop {MediaImage?} hero
+ * @prop {MediaImage?} large
+ * @prop {MediaImage?} small
+ * @prop {MediaImage?} thumbnail
+ * @prop {MediaImage} original
  */
