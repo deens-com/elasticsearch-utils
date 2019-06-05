@@ -32,6 +32,7 @@ function keepOnlyRequiredFields(trip) {
     fastBookable: trip.fastBookable,
     hearts: trip.hearts,
     heroImageUrl: getHeroUrl(trip.media),
+    moderationStatus: trip.moderationStatus,
     createdAt: trip.createdAt.getTime(),
     updatedAt: trip.updatedAt.getTime(),
     __v: trip.__v,
