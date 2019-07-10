@@ -11,7 +11,7 @@ function keepOnlyRequiredFields(service) {
     _id: service._id.toString(),
     status: service.status,
     privacy: service.privacy,
-    basePrice: service.basePrice,
+    basePrice: getBasePriceNumber(service),
     categories: service.categories,
     externalId: service.externalId,
     title: service.title,
@@ -27,6 +27,16 @@ function keepOnlyRequiredFields(service) {
     updatedAt: service.updatedAt.getTime(),
     __v: service.__v,
   };
+}
+
+/**
+ *
+ * @param {PartialService} service
+ * @returns {number}
+ */
+function getBasePriceNumber(service) {
+  if (service.basePrice.payPer === 'per-head') return service.basePrice.perAdult;
+  return service.basePrice.perSession;
 }
 
 /**

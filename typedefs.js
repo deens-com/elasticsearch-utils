@@ -7,7 +7,12 @@
  * @prop {ObjectId | string} _id
  * @prop {string} status
  * @prop {string} privacy
- * @prop {number} basePrice
+ * @prop {object} basePrice
+ * @prop {"per-head" | "per-session"} basePrice.payPer
+ * @prop {string} basePrice.priceType
+ * @prop {number} basePrice.perAdult
+ * @prop {number} basePrice.perChild
+ * @prop {number} basePrice.perSession
  * @prop {string[]} categories
  * @prop {string} externalId
  * @prop {object} title
