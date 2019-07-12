@@ -23,7 +23,7 @@ function keepOnlyRequiredFields(service) {
     isMostlyAvailable: service.isMostlyAvailable,
     heroImageUrl: getHeroUrl(service.media),
     payAt: service.checkoutOptions && service.checkoutOptions.payAt,
-    accommodationStars: service.accommodationProps && service.accommodationProps.accommodationStars,
+    accommodationStars: service.accommodationProps && service.accommodationProps.stars,
     createdAt: service.createdAt.getTime(),
     updatedAt: service.updatedAt.getTime(),
     __v: service.__v,

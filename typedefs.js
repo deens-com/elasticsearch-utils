@@ -32,7 +32,7 @@
  * @prop {MediaObject[]} media
  * @prop {{payAt: string} | undefined} checkoutOptions
  * @prop {object | undefined} accommodationProps
- * @prop {number} accommodationProps.accommodationStars
+ * @prop {number} accommodationProps.stars
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
