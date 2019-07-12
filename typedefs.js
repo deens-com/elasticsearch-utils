@@ -31,6 +31,8 @@
  * @prop {boolean} isMostlyAvailable
  * @prop {MediaObject[]} media
  * @prop {{payAt: string} | undefined} checkoutOptions
+ * @prop {object | undefined} accommodationProps
+ * @prop {number} accommodationProps.accommodationStars
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
@@ -60,6 +62,7 @@
  * @prop {boolean} isMostlyAvailable
  * @prop {string} heroImageUrl
  * @prop {string | undefined} payAt
+ * @prop {number} accommodationStars
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
