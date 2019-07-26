@@ -33,6 +33,7 @@
  * @prop {{payAt: string} | undefined} checkoutOptions
  * @prop {object | undefined} accommodationProps
  * @prop {number} accommodationProps.stars
+ * @prop {ObjectId} accommodationProps.amenities
  * @prop {Date} createdAt
  * @prop {Date} updatedAt
  * @prop {number} __v
@@ -63,6 +64,7 @@
  * @prop {string} heroImageUrl
  * @prop {string | undefined} payAt
  * @prop {number} accommodationStars
+ * @prop {string[]} accommodationAmenities
  * @prop {number} createdAt
  * @prop {number} updatedAt
  * @prop {number} __v
